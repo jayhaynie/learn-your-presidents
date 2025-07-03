@@ -46,20 +46,21 @@
 }
 
 #other1, #other2, #other3 {
-  font-size: 24px;
-  padding-bottom: 30px;;
+  font-size: 40px;
+  padding: 5px;;
 }
 
 #factsDiv {
   position: absolute;
-  top: 40px;
-  left: 650px;
+  top: 35px;
+  left: 500px;
   border: solid 4px gray;
+  width: 1400px;
 }
 
 #answerHeader {
   position: absolute;
-  top: 500px;
+  top: 530px;
   left: 1000px;
   border: solid 4px orange;
 }
@@ -67,11 +68,21 @@
 #optionsDiv {
   position: absolute;
   top: 600px;
-  left: 800px;
+  left: 950px;
   border: solid 4px lime;
 }
 
 #option1, #option2, #option3, #option4 {
-  padding-bottom: 20px;
+  padding: 5px;
+  font-size: 30px;
 }
 
+#refresh {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  right: 150px;
+  bottom: 150px;
+  font-size: 30px;
+  font-weight: bolder;
+}

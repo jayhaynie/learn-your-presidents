@@ -61,7 +61,35 @@ app.get('/api/presidents-info/:name', async (req, res) => {
   }
 });
 
+app.get('/api/presidents-options/life/:exclude', async (req, res) => {
+  const { exclude } = req.params;
+  // exclude should be a string like "Born in 1946 - And still alive" or "Born in 1809 - Died in 1865"
+  // You'll need to parse or ignore exclude for simplicity
+  const result = await pool.query(
+    `SELECT birth, death FROM pres_info WHERE CONCAT('Born in ', birth, ' - ', CASE WHEN death = 'N/A' THEN 'And still alive' ELSE CONCAT('Died in ', death) END) NOT LIKE $1 ORDER BY RANDOM() LIMIT 3`,
+    [exclude]
+  );
+  res.json(result.rows);
+});
+
 // get 3 pieces of data from the same column, that are not the same as the answer
+app.get('/api/presidents-options/:column/:exclude', async (req, res) => {
+  const { column, exclude } = req.params;
+  // Simple version, no validation
+  try {
+    const result = await pool.query(
+      `SELECT * FROM (
+        SELECT DISTINCT ${column} FROM pres_info WHERE ${column} NOT LIKE $1 AND ${column} IS NOT NULL
+      ) AS sub
+      ORDER BY RANDOM() LIMIT 3`,
+      [exclude]
+    );
+    res.json(result.rows.map(row => row[column]));
+  } catch (err) {
+    console.error('Query Error: ', err);
+    res.status(500).json({ error: 'Internal Server Error!' });
+  }
+});
 
 //start server
 app.listen(port, () => {
