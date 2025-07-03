@@ -1,0 +1,77 @@
+#name {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  border: solid 4px red;
+}
+
+#pictureDiv {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border: solid 4px blue;
+}
+
+#picture {
+  width: 350px;
+  height: 450px;
+}
+
+#number {
+  position: absolute;
+  top: 580px;
+  left: 180px;
+  border: solid 4px purple;
+}
+
+#life {
+  position: absolute;
+  top: 650px;
+  left: 150px;
+  border: solid 4px cyan;
+}
+
+#years {
+  position: absolute;
+  top: 720px;
+  left: 150px;
+  border: solid 4px green;
+}
+
+#terms {
+  position: absolute;
+  top: 790px;
+  left: 200px;
+  border: solid 4px gold;
+}
+
+#other1, #other2, #other3 {
+  font-size: 24px;
+  padding-bottom: 30px;;
+}
+
+#factsDiv {
+  position: absolute;
+  top: 40px;
+  left: 650px;
+  border: solid 4px gray;
+}
+
+#answerHeader {
+  position: absolute;
+  top: 500px;
+  left: 1000px;
+  border: solid 4px orange;
+}
+
+#optionsDiv {
+  position: absolute;
+  top: 600px;
+  left: 800px;
+  border: solid 4px lime;
+}
+
+#option1, #option2, #option3, #option4 {
+  padding-bottom: 20px;
+}
+

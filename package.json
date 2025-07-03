@@ -1,5 +1,29 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "name": "learn-your-presidents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayhaynie/learn-your-presidents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jayhaynie/learn-your-presidents/issues"
+  },
+  "homepage": "https://github.com/jayhaynie/learn-your-presidents#readme"
 }
